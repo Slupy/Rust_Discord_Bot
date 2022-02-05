@@ -1,2 +1,2 @@
-# Rust_Discord_Bot
+# Rust Discord Bot
 Discord бот на Rust
