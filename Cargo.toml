@@ -1,0 +1,22 @@
+[package]
+name = "rustdiscordbot"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tokio  = { version = "1.0", features = ["rt-multi-thread", "process", "macros", "time"] }
+tracing-subscriber = "0.3.8"
+
+[dependencies.serenity]
+git = "https://github.com/serenity-rs/serenity"
+branch = "current"
+default-features = true
+features = ["model", "collector", "native_tls_backend", "voice"]
+
+[target.'cfg(linux)'.dependencies.openssl]
+version = "0.10"
+features = ["vendored"]
+
+[patch.crates-io.serenity]
+git = "https://github.com/serenity-rs/serenity"
+branch = "current"
